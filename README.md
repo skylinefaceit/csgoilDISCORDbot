@@ -1,1 +1,3 @@
-# csgoilDISCORDbot
+# CSGOIL - Official Discord Bot
+
+---------------------------------------------------------
