@@ -96,7 +96,7 @@ client.on("message", async message => {
   if(command === "help") {
     message.channel.send({embed: {
     color: 3447003,
-    title: "Available Commands:",
+    title: "Available Commands",
     description: "defualt prefix = +",
     fields: [{
       name: "info"
@@ -105,11 +105,11 @@ client.on("message", async message => {
     { 
       name: "ban"
       value: "[@name] + [reason]"
-    }                   
+    }                 
   ]                      
    
 )};
-                         }
+                         }                     }
   
   if(command === "say") {
     if(!message.member.roles.some(r=>["Admins", "Moderators", "CSGOIL"].includes(r.name)) )
