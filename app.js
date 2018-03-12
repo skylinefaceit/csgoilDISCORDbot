@@ -97,7 +97,7 @@ client.on("message", async message => {
     message.channel.send({embed: {
     color: 3447003,
     title: "Available Commands:",
-    description: "defualt prefix = +"
+    description: "defualt prefix = +",
     fields: [{
       name: "info"
       value: "Displays an embed with info.
