@@ -86,7 +86,7 @@ client.on("message", async message => {
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "© Example"
+      text: "|"
     }
   }
 });
