@@ -68,8 +68,8 @@ client.on("message", async message => {
       icon_url: client.user.avatarURL
     },
     title: "CSGOIL OFFICIAL DISCORD BOT",
-    url: false,
-    description: "CSGOIL Bot uses an [open-sorcue code] (https://github.com/skylinefaceit/csgoilDISCORDbot).",
+    url: "https://google.com",
+    description: "CSGOIL Bot uses an [open-sorcue code](https://github.com/skylinefaceit/csgoilDISCORDbot).",
     fields: [{
         name: "Fields",
         value: "They can have different fields with small headlines."
