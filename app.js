@@ -100,7 +100,7 @@ client.on("message", async message => {
     description: "defualt prefix = +",
     fields: [{
       name: "info"
-      value: "Displays an embed with info.
+      value: "Displays an embed with info."
     },
     { 
       name: "ban"
