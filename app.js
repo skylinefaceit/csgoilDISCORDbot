@@ -93,24 +93,6 @@ client.on("message", async message => {
   }
   
   
-  if(command === "help") {
-    message.channel.send({embed: {
-    color: 3447003,
-    title: "Available Commands",
-    description: "defualt prefix = +",
-    fields: [{
-      name: "info"
-      value: "Displays an embed with info."
-    },
-    { 
-      name: "ban"
-      value: "[@name] + [reason]"
-    }                 
-  ]                      
-   
-)};
-                         }                     }
-  
   if(command === "say") {
     if(!message.member.roles.some(r=>["Admins", "Moderators", "CSGOIL"].includes(r.name)) )
     return message.reply("Sorry, you don't have permissions to use this!");   
