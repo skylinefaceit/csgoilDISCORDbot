@@ -79,8 +79,8 @@ client.on("message", async message => {
         value: "[FACEIT](https://www.faceit.com/en/players/SaarFACEIT), Discord @SkylineFACEIT#1825."
       },
       {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
+        name: "Moderators",
+        value: "grouch: [FACEIT](https://www.faceit.com/en/players/grouch), Discord @talpa#0746"
       }
     ],
     timestamp: new Date(),
