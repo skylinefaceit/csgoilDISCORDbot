@@ -96,9 +96,8 @@ client.on("message", async message => {
   if(command === "help") {
     message.channel.send({embed: {
      color: 3447003,
-     description: "Available Commands:
-      shshsj
-      sjsjsj"
+     description: "Available Commands:"
+   
 }});
   }
   
