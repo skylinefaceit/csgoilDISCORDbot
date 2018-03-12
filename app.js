@@ -71,12 +71,12 @@ client.on("message", async message => {
     url: "https://google.com",
     description: "CSGOIL Bot uses an [open-sorcue code](https://github.com/skylinefaceit/csgoilDISCORDbot).",
     fields: [{
-        name: "Fields",
-        value: "They can have different fields with small headlines."
+        name: "FACEIT",
+        value: "Organzation [link](https://www.faceit.com/en/organizers/47f673aa-78d6-454b-8b72-34641263ed22/CSGOIL)."
       },
       {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
+        name: "Owner",
+        value: "[FACEIT](https://www.faceit.com/en/players/SaarFACEIT), Discord @SkylineFACEIT#1825."
       },
       {
         name: "Markdown",
