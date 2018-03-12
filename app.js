@@ -95,9 +95,9 @@ client.on("message", async message => {
   
   if(command === "help") {
     message.channel.send({embed: {
-    color: ffffff,
+    color: 3447003,
     title: "Available Commands:",
-    description: "*defualt prefix = +*"
+    description: "defualt prefix = +"
     fields: [{
       name: "info"
       value: "Displays an embed with info.
