@@ -106,10 +106,10 @@ client.on("message", async message => {
       name: "ban"
       value: "[@name] + [reason]"
     }                   
-  ],                      
+  ]                      
    
-}});
-  }
+}})};
+  
   
   if(command === "say") {
     if(!message.member.roles.some(r=>["Admins", "Moderators", "CSGOIL"].includes(r.name)) )
