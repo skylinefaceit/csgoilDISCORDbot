@@ -90,6 +90,7 @@ client.on("message", async message => {
     }
   }
 });
+  }
   
   
   if(command === "say") {
