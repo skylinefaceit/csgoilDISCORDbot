@@ -62,7 +62,7 @@ client.on("message", async message => {
   
   if(command === "social") { 
   
-    message.channel.send("Twitter - https://twitter.com/officilcsgoil")
+    message.channel.send("Twitter - https://twitter.com/officialcsgoil")
     
   }
   
