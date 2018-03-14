@@ -60,6 +60,13 @@ client.on("message", async message => {
   }
   
   
+  if(command === "social") { 
+  
+    message.channel.send("Twitter - https://twitter.com/officilcsgoil")
+    
+  }
+  
+  
   if(command === "info") {
     message.channel.send({embed: {
     color: 3447003,
