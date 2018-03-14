@@ -59,11 +59,16 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   
+ //SOCIAL COMMANDS
   
-  if(command === "social") { 
+  if(command === "socialtwitter") { 
   
     message.channel.send("Twitter - https://twitter.com/officialcsgoil")
     
+  }
+  
+  if(command === "socialinsta") {
+    message.channel.send("Instagram - https://www.instagram.com/csgoilfaceit/")
   }
   
   
