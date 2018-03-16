@@ -60,7 +60,17 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   
- //SOCIAL COMMANDS
+  if(command === "test") {
+    const mm = await message.channel.send("testing...");
+    mm.edit(`Test completed.`)
+    
+  }
+  
+  
+  
+  
+  //SOCIAL COMMANDS
+  
   
   if(command === "socialtwitter") { 
   
