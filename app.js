@@ -61,7 +61,7 @@ client.on("message", async message => {
   }
   
   if(command === "test") {
-    const mm = await message.channel.send("testing...");
+    const mm = await message.channel.send("Testing...");
     setTimeout(function() {
     mm.edit(`Test completed.`);
     }, 300);
