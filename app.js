@@ -64,7 +64,7 @@ client.on("message", async message => {
     const userMessage = args.join(" ");
     const mm = await message.channel.send("Receiving message...");
     setTimeout(function() {
-    mm.edit(`You said, ($userMessage) `);
+    mm.edit(`You said, ${userMessage}`);
     }, 300);
   }
   
