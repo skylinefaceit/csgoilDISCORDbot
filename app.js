@@ -62,6 +62,9 @@ client.on("message", async message => {
   
   if(command === "test") {
     const mm = await message.channel.send("testing...");
+    await;
+    await;
+    await;
     mm.edit(`Test completed.`)
     
   }
