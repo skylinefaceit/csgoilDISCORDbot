@@ -1,5 +1,4 @@
 // TESTEST
-const Player = new Discord.Client();
 // Load up the discord.js library
 const Discord = require("discord.js");
 
