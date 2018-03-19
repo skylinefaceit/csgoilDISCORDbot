@@ -99,8 +99,7 @@ client.on("message", async message => {
       return message.reply("Please indicate a reason for the kick!");
     
     // Now, time for a swift kick in the nuts!
-    await message.UserNammme.sendMessage(reason)
-     .catch();
+    message.UserNammme.sendMessage(reason)
     message.reply(`${UserNammme.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
   }
