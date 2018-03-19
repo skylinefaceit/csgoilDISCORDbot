@@ -95,7 +95,7 @@ client.on("message", async message => {
      await message.memberDS(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     message.reply(`${memberDS.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
-
+)
   } 
   
   
