@@ -70,6 +70,11 @@ client.on("message", async message => {
   
   
   
+  //DM
+  
+  if(command === "dm") {
+   message.author.sendMessage("test") 
+  }
   
   //SOCIAL COMMANDS
   
