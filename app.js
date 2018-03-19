@@ -83,10 +83,10 @@ client.on("message", async message => {
     
     // Let's first check if we have a member and if we can kick them!
     // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
-    let member = message.mentions.members.first();
-    if(!member)
+    let UserNammme = message.mentions.members.first();
+    if(!UserNammme)
       return message.reply("Please mention a valid member of this server");
-    if(!member.kickable) 
+    if(!UserNammme.kickable) 
       return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
     
     // slice(1) removes the first part, which here should be the user mention!
@@ -95,9 +95,9 @@ client.on("message", async message => {
       return message.reply("Please indicate a reason for the kick!");
     
     // Now, time for a swift kick in the nuts!
-    await message.member.send(reason)
+    await message.UserNammme.send(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+    message.reply(`${UserNammme.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
   }
   
