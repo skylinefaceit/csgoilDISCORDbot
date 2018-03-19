@@ -101,32 +101,7 @@ client.on("message", async message => {
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  //DM
-  
-  if(command === "warning") {
-    let member = message.mentions.members.first();
-    if(!member)
-      return message.reply("Please mention a valid member of this server");
-    if(!member.kickable) 
-      return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
-    
-    // slice(1) removes the first part, which here should be the user mention!
-    let reason = args.slice(1).join(' ');
-    if(!reason)
-      return message.reply("Please indicate a reason for the kick!");
-    
-    await message.member.sendMessage(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't DM that user because of : ${error}`));
-    message.reply(`${member.user.tag} has been warned by ${message.author.tag} because: ${reason}`);
 
-   
   }
   
   //SOCIAL COMMANDS
