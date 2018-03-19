@@ -7,8 +7,6 @@ const Discord = require("discord.js");
 // this is what we're refering to. Your client.
 const client = new Discord.Client();
 
-const Player = new Discord.Client();
-
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
 // config.token contains the bot's token
@@ -217,17 +215,16 @@ client.on("message", async message => {
 });
 
 
-Player.on('message', (message) => {
+client.on('message', (message) => {
 
 
 
-    if (message.author.bot) return;
+    if (message.author.client) return;
     const args = message.content.split(/ +/g);
     const command = args.shift().toLowerCase();
 
     if(command === `!dm ` + `${player.user.tag}` + `${message.content}`) {
-        message.Player.sendMessage(`-${message.author}` + "\n" + 
-`${message.content}`);
+        message.Player.sendMessage(`-${message.author}` + "\n" + `${message.content}`);
     }
 
  });
