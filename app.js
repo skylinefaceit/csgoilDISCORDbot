@@ -77,7 +77,7 @@ client.on("message", async message => {
   
   
 
-  }
+  
   
   //SOCIAL COMMANDS
   
