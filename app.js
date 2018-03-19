@@ -1,4 +1,5 @@
 // TESTEST
+const Player = new Discord.Client();
 // Load up the discord.js library
 const Discord = require("discord.js");
 
@@ -75,37 +76,7 @@ client.on("message", async message => {
   
   
 
-  
-  
-  
-   if(command === "warn") {
-    // This command must be limited to mods and admins. In this example we just hardcode the role names.
-    // Please read on Array.some() to understand this bit: 
-    // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.some(r=>["Administrator", "Moderator", "CSGOIL"].includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
-    
-    // Let's first check if we have a member and if we can kick them!
-    // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
-    let UserNammme = message.mentions.members.first();
-    if(!UserNammme)
-      return message.reply("Please mention a valid member of this server");
-    if(!UserNammme.kickable) 
-      return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
-    
-    // slice(1) removes the first part, which here should be the user mention!
-    let reason = args.slice(1).join(' ');
-    if(!reason)
-      return message.reply("Please indicate a reason for the kick!");
-    
-    // Now, time for a swift kick in the nuts!
-    message.UserNammme.sendMessage(reason)
-    message.reply(`${UserNammme.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
-  }
-  
-  
-  
   
   
   
@@ -243,5 +214,24 @@ client.on("message", async message => {
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
 });
+
+
+Player.on('message', (message) => {
+
+
+
+    if (message.author.bot) return;
+    const args = message.content.split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if(command === `!dm ` + `${player.user.tag}` + `${message.content}`) {
+        message.Player.sendMessage(`-${message.author}` + "\n" + 
+`${message.content}`);
+    }
+
+ });
+
+
+
 
 client.login(process.env.B0T_T0KEN);
