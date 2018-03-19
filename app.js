@@ -100,7 +100,7 @@ client.on("message", async message => {
     
     // Now, time for a swift kick in the nuts!
     await message.UserNammme.sendMessage(reason)
-      
+     .catch();
     message.reply(`${UserNammme.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
   }
