@@ -215,21 +215,4 @@ client.on("message", async message => {
 });
 
 
-client.on('message', (message) => {
-
-
-
-    if (message.author.client) return;
-    const args = message.content.split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-    if(command === `!dm ` + `${player.user.tag}` + `${message.content}`) {
-        message.Player.sendMessage(`-${message.author}` + "\n" + `${message.content}`);
-    }
-
- });
-
-
-
-
 client.login(process.env.B0T_T0KEN);
