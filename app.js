@@ -72,16 +72,18 @@ client.on("message", async message => {
   
   
   if(command === "warn") {
+    // Gets the username and puts it in warnUser.
     let warnUser = message.mentions.members.first();
+    //Checks if you entered a valid username.
     if(!warnUser)
       return message.reply("Please mention a valid member of this server.");
     
-    
+    //Gets the reason and puts it in warnReason
     let warnReason = args.slice(1).join(' ');
     if(!warnReason)
       return message.reply("Please indicate a reason for the ");
     
-    
+    //Finally, message the user.
     await warnUser.send(`You have been warned by user ${message.author} because: ${warnReason}`)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't send a direct message to this user because of : ${error}`));
     message.reply(`${warnUser.user.tag} has been warned by ${message.author.tag} because: ${warnReason}`);
