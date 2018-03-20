@@ -33,6 +33,19 @@ client.on("guildDelete", guild => {
 });
 
 
+
+client.on("message", (message) => {
+  if (message.content.startsWith("!ftn")) {
+    message.delete().catch(O_o=>{}); 
+    message.channel.send("Get your Fornite Stats on #fortnite-stats");
+    
+  }
+});
+
+
+
+
+
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
@@ -95,13 +108,11 @@ client.on("message", async message => {
 
   
   }
+  
  
   
-  
 
 
-  
-  
   
   
   
