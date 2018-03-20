@@ -34,19 +34,6 @@ client.on("guildDelete", guild => {
 
 
 
-client.on("message", (message) => {
-  if (!channel.id(422433378135048206))
-    return message.channel.send("")
-  
-  if (message.content.startsWith("!ftn")) {
-    message.delete().catch(O_o=>{}); 
-    message.channel.send("Get your Fornite Stats on #fortnite-stats");
-    
-  }
-});
-
-
-
 
 
 client.on("message", async message => {
