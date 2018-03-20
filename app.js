@@ -82,9 +82,9 @@ client.on("message", async message => {
       return message.reply("Please indicate a reason for the ");
     
     
-    await warnUser.send(warnReason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`${warnUser.user.tag} has been kicked by ${message.author.tag} because: ${warnReason}`);
+    await warnUser.send(`You have been warned by user ${message.author} because: ${warnReason}`)
+      .catch(error => message.reply(`Sorry ${message.author} I couldn't send a direct message to this user because of : ${error}`));
+    message.reply(`${warnUser.user.tag} has been warned by ${message.author.tag} because: ${warnReason}`);
     
 
   
