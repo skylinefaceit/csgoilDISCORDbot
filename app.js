@@ -72,8 +72,8 @@ client.on("message", async message => {
   
   
   if(command === "warn") {
-    if(!message.member.roles.some(r=>["Admins", "Moderators", "CSGOIL"].includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
+    if(!message.member.roles.some(r=>["Admins", "CSGOIL"].includes(r.name)) )
+    return message.reply("Sorry, you don't have permissions to use this!");
     
     // Gets the username and puts it in warnUser.
     let warnUser = message.mentions.members.first();
