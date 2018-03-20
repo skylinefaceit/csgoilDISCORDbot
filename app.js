@@ -35,7 +35,7 @@ client.on("guildDelete", guild => {
 
 
 client.on("message", (message) => {
-  if (!channel.id.422433378135048206)
+  if (!channel.id(422433378135048206))
     return message.channel.send("")
   
   if (message.content.startsWith("!ftn")) {
