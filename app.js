@@ -86,6 +86,7 @@ client.on("message", async message => {
     //Finally, message the user.
     await warnUser.send(`You have been warned by user ${message.author} because: ${warnReason}`)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't send a direct message to this user because of : ${error}`));
+    console.log(`User ${warnUser} was warned by user ${message.author.tag} because: ${warnUser}`)
     message.reply(`${warnUser.user.tag} has been warned by ${message.author.tag} because: ${warnReason}`);
     
 
