@@ -99,7 +99,32 @@ client.on("message", async message => {
   
   }
   
+  
+  
+  
  
+  if(command === "dm") {
+    if(!message.member.roles.some(r=>["Admins", "CSGOIL", "Moderators"].includes(r.name)) )
+    return message.reply("Sorry you don't have premission to use that!")
+   
+    // Gets the username and puts it in warnUser.
+    let dmUser = message.mentions.members.first();
+    //Checks if you entered a valid username.
+    if(!dmUser)
+      return message.reply("Please mention a valid member of this server.");
+    
+    //Gets the reason and puts it in warnReason
+    let dmReason = args.slice(1).join(' ');
+    if(!dmReason)
+      return message.reply("Please indicate a reason for the ");
+    
+    //Finally, message the user.
+    await dmUser.send(`User, ${message.author} says: ${dmReason}`)
+      .catch(error => message.reply(`Sorry ${message.author} I couldn't send a direct message to that user because of : ${error}`));
+    
+    
+      
+  }
   
 
 
