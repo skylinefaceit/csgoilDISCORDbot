@@ -110,7 +110,7 @@ client.on("message", async message => {
       return message.reply("Please indicate a reason for the ");
     
     //Finally, message the user.
-    await 426805619815743489.send(`User, ${message.author} says: ${dmReason}`)
+    await dmUser.send(`User, ${message.author} says: ${dmReason}`)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't send a direct message to that user because of : ${error}`));
     
     
