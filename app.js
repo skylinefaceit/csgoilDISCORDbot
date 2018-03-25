@@ -192,6 +192,8 @@ client.on("message", async message => {
     if(!message.member.roles.some(r=>["Administrator", "Moderator", "CSGOIL"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
     
+    let member = message.mentions.members.first();
+    
     // Let's first check if we have a member and if we can kick them!
     // message.mentions.members is a collection of people that have been mentioned, as rver");
     if(!member.kickable) 
@@ -201,6 +203,7 @@ client.on("message", async message => {
     let reason = args.slice(1).join(' ');
     if(!reason)
       return message.reply("Please indicate a reason for the ");
+    
     
     // Now, time for a swift kick in the nuts!
     await member.kick(reason)
