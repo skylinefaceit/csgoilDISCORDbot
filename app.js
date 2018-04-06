@@ -171,6 +171,18 @@ client.on("message", async message => {
   }
 });
   }
+ 
+  if(command === "saychannel") {
+  
+   let channel = args.slice(0).join(' ');
+   let message = args.slice(1).join(' ');
+    
+   await channel.send(message);
+                                    
+                             
+  
+  }
+  
   
   
   if(command === "say") {
