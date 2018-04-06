@@ -177,7 +177,7 @@ client.on("message", async message => {
    let channelSSS = args.slice(0).join(' ');
    let messageE = args.slice(1).join(' ');
     
-   await message.channelSSS.send(messageE);
+   await message.channelSSS.sendMessage(messageE);
                                     
                              
   
