@@ -172,16 +172,6 @@ client.on("message", async message => {
 });
   }
  
-  if(command === "saychannel") {
-  
-   let channelSSS = args.slice(0).join(' ');
-   let messageE = args.slice(1).join(' ');
-    
-   await message.channelSSS.sendMessage(messageE);
-                                    
-                             
-  
-  }
   
   
   
